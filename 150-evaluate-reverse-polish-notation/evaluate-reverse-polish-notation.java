@@ -1,7 +1,7 @@
 class Solution {
     public int evalRPN(String[] tokens) {
         Stack<Integer> stack = new Stack<>();
-        int num1, num2, ans;
+        int num1, num2;
         for(int i = 0; i < tokens.length; i++){
             if(tokens[i].equals("+")){
                 num1 = stack.pop();
@@ -24,7 +24,6 @@ class Solution {
                 stack.push(num);
             }
         }
-        ans = stack.peek();
-        return ans;
+        return stack.peek();
     }
 }
